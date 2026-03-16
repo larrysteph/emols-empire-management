@@ -1,54 +1,42 @@
-/* DATABASE STRUCTURE - EMOLS EMPIRE 
-  Stats YouTube & Gestion Studio 
-*/
-
+-- SETUP DE LA BASE
 CREATE DATABASE IF NOT EXISTS emols_db;
 USE emols_db;
 
--- Table Stats YouTube / Streaming
-DROP TABLE IF EXISTS label_stats;
-CREATE TABLE label_stats (
-    id_stat INT PRIMARY KEY AUTO_INCREMENT,
+-- 1. TABLE STATS YOUTUBE (LABEL)
+CREATE TABLE IF NOT EXISTS label_stats (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     nom_artiste VARCHAR(100),
     titre_oeuvre VARCHAR(255),
-    date_pub VARCHAR(100),
+    date_pub DATE,
     vues_streams INT,
-    heures_visionnage DECIMAL(15,4),
+    heures_visionnage DECIMAL(10,2),
     impressions INT,
-    ctr_clics DECIMAL(10,2),
-    statut_artiste VARCHAR(20) -- Actif / Ancien
+    ctr_clics DECIMAL(5,2),
+    statut_artiste VARCHAR(50)
 );
 
--- Table Business Studio
-DROP TABLE IF EXISTS studio_business;
-CREATE TABLE studio_business (
-    id_prestation INT PRIMARY KEY AUTO_INCREMENT,
+-- 2. TABLE BUSINESS (STUDIO)
+CREATE TABLE IF NOT EXISTS studio_business (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     nom_client VARCHAR(100),
     service VARCHAR(100),
     tarif_fcfa INT,
     date_prestation DATE,
-    statut_paiement VARCHAR(50) -- Payé / En attente
+    statut_paiement VARCHAR(50)
 );
 
--- Data Artistes
-INSERT INTO label_stats (nom_artiste, titre_oeuvre, date_pub, vues_streams, heures_visionnage, impressions, ctr_clics, statut_artiste) 
-VALUES 
-('N.T', 'Vidéo N.T 1', '2025-10-12', 45200, 1200.50, 350000, 5.2, 'Actif'),
-('N.T', 'Vidéo N.T 2', '2025-11-05', 12500, 450.25, 120000, 4.8, 'Actif'),
-('Lechat 241', 'Vidéo Lechat', '2025-12-01', 220706, 7601.01, 1303803, 7.47, 'Actif'),
-('Lechat 241', 'Freestyle Lechat', '2026-01-15', 59701, 1769.61, 397372, 6.95, 'Actif'),
-('Slow Boyz', 'Classique Slow', '2024-05-20', 626779, 22432.24, 5402092, 6.3, 'Ancien'),
-('Clyve the Jok''r', 'Ancien Hit', '2024-02-14', 29264, 288.61, 153172, 8.08, 'Ancien');
+-- IMPORT DES DONNÉES RÉELLES
+INSERT INTO label_stats (nom_artiste, titre_oeuvre, date_pub, vues_streams, heures_visionnage, impressions, ctr_clics, statut_artiste) VALUES 
+('Lechat 241', 'Mamie Wata .feat @nt_musique', '2025-10-17', 220706, 7601.01, 1303803, 7.47, 'Actif'),
+('Lechat 241', 'Pas du Ndoss [Official Video]', '2025-05-31', 59701, 1769.61, 397372, 6.95, 'Actif'),
+('N.T', 'La capitale Ndolo [Official Video]', '2024-12-27', 7768, 269.68, 27106, 13.14, 'Actif'),
+('N.T', 'Why (Official Music Video)', '2025-04-11', 4905, 146.54, 19647, 11.63, 'Actif'),
+('Slow Boyz', 'Ma Nga [Official Video]', '2024-07-25', 626779, 22432.24, 5402092, 6.30, 'Ancien'),
+('Slow Boyz', 'Ma Nga (Lyrics Video)', '2024-07-15', 74412, 2557.50, 486546, 9.08, 'Ancien'),
+('Clyve the Jok''r', 'Bombasse feat. Dyzie', '2024-05-17', 29264, 288.61, 153172, 8.08, 'Ancien');
 
--- Data Studio
-INSERT INTO studio_business (nom_client, service, tarif_fcfa, date_prestation, statut_paiement) 
-VALUES 
-('Ragnarock le fanatique', 'Prise de voix + Mix', 30000, '2025-12-17', 'Payé'),
-('Artiste Inconnu', 'Pack Complet', 70000, '2026-02-10', 'Payé'),
-('Client Alpha', 'Mix & Master distance', 30000, '2026-03-01', 'En attente'),
-('Double K', 'Beat Simple', 30000, '2026-03-05', 'Payé');
-
--- Check final
-SELECT nom_artiste, SUM(vues_streams) AS total_vues, statut_artiste 
-FROM label_stats 
-GROUP BY nom_artiste, statut_artiste;
+-- ACTIVITÉ RÉCENTE DU STUDIO
+INSERT INTO studio_business (nom_client, service, tarif_fcfa, date_prestation, statut_paiement) VALUES 
+('Ragnarock', 'Mix & Master', 40000, '2026-03-10', 'Payé'),
+('New Artiste', 'Recording session', 10000, '2026-03-12', 'En attente'),
+('Client Premium', 'Mastering complet', 70000, '2026-03-15', 'Payé');
