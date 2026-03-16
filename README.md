@@ -13,3 +13,8 @@ Ici, je centralise toutes les données du label et du studio. Le but est simple 
 
 ## Les technos :
 SQL (MySQL), VS Code pour le code, et bientôt Power BI pour les graphiques.
+## 🎯 Objectif Global
+Ce système est le coeur data de **Emols Empire**. À terme, il servira à :
+* Automatiser le calcul des royalties pour les artistes.
+* Créer un outil de devis automatique pour les clients du studio.
+* Analyser les tendances de streaming pour optimiser les sorties du label.
