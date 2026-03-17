@@ -23,11 +23,13 @@ Ce système est le coeur data de **Emols Empire**. À terme, il servira à :
 * Analyser les tendances de streaming pour optimiser les sorties du label.
 ## 📊 Aperçu du Projet
 
+## 📊 Aperçu du Projet Emols Empire
+
 ### Dashboard Principal
-![Dashboard Emols](images/dashboard_main.png)
+![Dashboard](images/dashboard_table/votre_image.png)
 
-### Détails des Tarifs Studio
-![Tableau Tarifs](images/dashboard_table.png)
+### Analyse SQL
+![SQL](images/sql_query/votre_image.png)
 
-### Architecture SQL
-![Requête SQL](images/sql_query.png)
+### Tarifs Studio
+![Tarifs](images/tarrif_emols/votre_image.png)
