@@ -21,3 +21,13 @@ Ce système est le coeur data de **Emols Empire**. À terme, il servira à :
 * Automatiser le calcul des royalties pour les artistes.
 * Créer un outil de devis automatique pour les clients du studio.
 * Analyser les tendances de streaming pour optimiser les sorties du label.
+## 📊 Aperçu du Projet
+
+### Dashboard Principal
+![Dashboard Emols](images/dashboard_main.png)
+
+### Détails des Tarifs Studio
+![Tableau Tarifs](images/dashboard_table.png)
+
+### Architecture SQL
+![Requête SQL](images/sql_query.png)
