@@ -1,22 +1,22 @@
 # 🚀 Emols Empire - Pilotage Data & Business
 
-Ce projet présente une solution complète d'analyse de données pour le label **Emols Production**.
-
-## 📊 Visualisations du Projet
-
-### 1. Dashboard de Performance (Power BI)
-Ici, le pilotage des revenus et des vues YouTube.
-![Dashboard](images/dashboard_table/Capture%20d’écran%202026-03-17%20002929.png)
-
-### 2. Architecture de la Base de Données (SQL)
-La structure backend réalisée sur MySQL.
-![SQL](images/sql_query/Capture%20d’écran%202026-03-17%20002135.png)
-
-### 3. Suivi des Tarifs et Encaissements
-Le détail financier du studio.
-![Tarifs](images/tarrif_emols/Capture%20d’écran%202026-03-17%20002135.png)
+Ce projet présente une solution complète d'analyse de données pour le label **Emols Production**, incluant l'architecture SQL et la Business Intelligence.
 
 ## 🛠️ Stack Technique
-- **SQL (MySQL)** : Gestion des bases de données.
-- **Power BI** : Business Intelligence & Data Viz.
-- **Git/GitHub** : Versioning et Documentation.
+- **Base de données** : MySQL (Architecture relationnelle)
+- **Visualisation** : Power BI (Analyse interactive)
+- **Versioning** : Git / GitHub
+
+## 📈 Résultats & KPIs Clés
+- **Chiffre d'Affaires Studio** : 420 000 FCFA (Objectif annuel : 1 000 000 FCFA)
+- **Top Artiste** : Lechat 241 (Analyse de la croissance des vues YouTube)
+- **Services suivis** : Beatmaking, Mixage & Mastering, Conseil & DA
+
+## 📂 Structure du Projet
+- `/images` : Captures d'écran des résultats (SQL & Power BI)
+- `script_final_emols.sql` : Code source de la base de données
+- `Dashboard_Emols_Empire.pbix` : Fichier source Power BI
+
+## 📝 Installation
+1. Exécuter le script SQL dans MySQL Workbench pour recréer la base.
+2. Ouvrir le fichier .pbix pour explorer le dashboard interactif.
