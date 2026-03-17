@@ -1,18 +1,21 @@
-# Emols Empire - Data Management
+# 🚀 Emols Empire - Système de Pilotage Data
 
-Ici, je centralise toutes les données du label et du studio. Le but est simple : avoir une vision claire sur ce qui marche (YouTube) et sur l'argent qui rentre (Studio).
+Ce projet combine le **SQL** et la **Business Intelligence** pour piloter les performances d'un label de musique.
 
-## Ce qu'il y a dans ce projet :
-* **Label Stats** : Tous les chiffres YouTube (vues, impressions, CTR) de Lechat 241, N.T, Slow Boyz et Clyve. 
-* **Studio Business** : Ma gestion des clients (Recording, Mix, Master) et le suivi des paiements.
+## 📊 Fonctionnalités
+- **Suivi YouTube** : Analyse des vues et du CTR par artiste (Lechat 241, N.T, etc.).
+- **Gestion Studio** : Tracking des revenus (Beatmaking, Mixage) avec un CA actuel de **420 000 FCFA**.
+- **Objectif Business** : Jauge interactive avec un objectif de **1 000 000 FCFA**.
 
-## Comment je l'utilise :
-1. J'importe les CSV de YouTube Studio dans MySQL.
-2. Je traite les données pour les rendre propres (formatage des dates, gestion des artistes actifs/anciens).
-3. Je prépare le terrain pour sortir des dashboards sur Power BI.
+## 🛠️ Stack Technique
+- **Base de données** : MySQL (Architecture de tables relationnelles).
+- **Visualisation** : Power BI (Thème sombre, mode interactif).
+- **Versionnage** : Git & GitHub.
 
-## Les technos :
-SQL (MySQL), VS Code pour le code, et bientôt Power BI pour les graphiques.
+## 📂 Contenu du dépôt
+- `script_final_emols.sql` : Structure et données de la base.
+- `EMOLS_DASHBOARD.pbix` : Rapport Power BI complet.
+- `/images_graph` : Preuves visuelles du projet.
 ## 🎯 Objectif Global
 Ce système est le coeur data de **Emols Empire**. À terme, il servira à :
 * Automatiser le calcul des royalties pour les artistes.
